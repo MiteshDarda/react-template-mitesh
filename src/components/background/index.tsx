@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Alert, Box, Snackbar } from "@mui/material";
 import { RootState } from "../../store/reducers";
-import { clearMessage } from "../../store/reducers/message_slice";
+import { clearMessage } from "../../store/reducers/message-slice";
 
 export default function Background() {
   //$ --------------------------------------- Constants ---------------------------------------
