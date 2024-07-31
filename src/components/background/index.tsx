@@ -1,18 +1,14 @@
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Alert, Box, Snackbar } from "@mui/material";
-import { RootState } from "../../store/reducers";
-import { clearMessage } from "../../store/reducers/message-slice";
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Alert, Box, Snackbar } from '@mui/material';
+import { clearMessage } from '../../store/reducers/message-slice';
+import { RootState } from '../../store';
 
 export default function Background() {
   //$ --------------------------------------- Constants ---------------------------------------
   const [messageProgress, setMessageProgress] = useState(0);
-  const messageType = useSelector(
-    (state: RootState) => state.message.messageType,
-  );
-  const messageText = useSelector(
-    (state: RootState) => state.message.messageText,
-  );
+  const messageType = useSelector((state: RootState) => state.rootReducer.message.messageType);
+  const messageText = useSelector((state: RootState) => state.rootReducer.message.messageText);
   const dispatch = useDispatch();
 
   //$ --------------------------------------- Functions ---------------------------------------
@@ -51,8 +47,7 @@ export default function Background() {
           elevation={6}
           variant="filled"
           onClose={handleClose}
-          severity={messageType || "error"}
-        >
+          severity={messageType || 'error'}>
           {messageText}
         </Alert>
       </Snackbar>
