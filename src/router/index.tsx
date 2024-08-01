@@ -8,11 +8,11 @@ function ErrorBoundary() {
   const error = useRouteError();
   console.error(error);
   const images = [
-    <img className="h-96" src="/1.jpeg" />,
-    <img className="h-96" src="/2.jpeg" />,
-    <img className="h-96" src="/3.jpeg" />,
-    <img className="h-96" src="/4.jpeg" />,
-    <img className="h-96" src="/5.jpeg" />
+    <img className="h-96" src="/404/1.jpeg" />,
+    <img className="h-96" src="/404/2.jpeg" />,
+    <img className="h-96" src="/404/3.jpeg" />,
+    <img className="h-96" src="/404/4.jpeg" />,
+    <img className="h-96" src="/404/5.jpeg" />
   ];
   const navigate = useNavigate();
   return (
