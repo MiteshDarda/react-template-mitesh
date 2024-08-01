@@ -11,7 +11,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <Provider store={store}>
     <PersistGate persistor={persistor}>
       <Background />
-      <div className="bg-[#111111] min-h-screen m-0 p-0">
+      <div className=" min-h-screen m-0 p-0">
         <RouterProvider router={router} fallbackElement={<p>Loading...</p>} />
       </div>
     </PersistGate>
